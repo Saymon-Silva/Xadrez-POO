@@ -18,18 +18,15 @@ public class Peao extends Peca{
                if (this.primMov) {
                    if(posicaoTAbuleiro.get(posicaoNoTabuleiro+16).getPeca()==null){
                    possiveisMovimentos.add(posicaoTAbuleiro.get(posicaoNoTabuleiro + 16));
-               }
+                    }
                }
            }
            if (posicaoTAbuleiro.get(posicaoNoTabuleiro+9).getPeca().getCor().equals("Branco") && !validaExtremidade( posicaoNoTabuleiro+1)){
                possiveisMovimentos.add(posicaoTAbuleiro.get(posicaoNoTabuleiro+9));
-
            }
            if (posicaoTAbuleiro.get(posicaoNoTabuleiro+7).getPeca().getCor().equals("Branco") && !validaExtremidade( posicaoNoTabuleiro)){
                possiveisMovimentos.add(posicaoTAbuleiro.get(posicaoNoTabuleiro+7));
-
            }
-
        }
         else{
            if(posicaoTAbuleiro.get(posicaoNoTabuleiro-8).getPeca()==null) {
@@ -37,20 +34,16 @@ public class Peao extends Peca{
                if (this.primMov) {
                    if(posicaoTAbuleiro.get(posicaoNoTabuleiro-16).getPeca()==null){
                        possiveisMovimentos.add(posicaoTAbuleiro.get(posicaoNoTabuleiro - 16));
-                   }}
+                   }
+               }
            }
            if (posicaoTAbuleiro.get(posicaoNoTabuleiro-9).getPeca().getCor().equals("Preto")  &&  !validaExtremidade( posicaoNoTabuleiro)){
                possiveisMovimentos.add(posicaoTAbuleiro.get(posicaoNoTabuleiro-9));
-
            }
            if (posicaoTAbuleiro.get(posicaoNoTabuleiro-7).getPeca().getCor().equals("Preto")  &&  !validaExtremidade( posicaoNoTabuleiro+1)){
                possiveisMovimentos.add(posicaoTAbuleiro.get(posicaoNoTabuleiro-7));
-
            }
-
         }
-
-
 
         return possiveisMovimentos;
     }
