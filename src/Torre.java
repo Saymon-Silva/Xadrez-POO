@@ -51,8 +51,7 @@ public class Torre extends Peca{
 
     @Override
     public String toString() {
-        return "Torre{" +
-                "primMov=" + primMov +
-                "} " + super.toString();
+        String letra = this.getCor().substring(0,1);
+        return "T - " + letra;
     }
 }

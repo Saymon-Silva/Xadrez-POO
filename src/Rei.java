@@ -48,8 +48,7 @@ public class Rei extends Peca{
 
     @Override
     public String toString() {
-        return "Rei{" +
-                "primMov=" + primMov +
-                "} " + super.toString();
+        String letra = this.getCor().substring(0,1);
+        return "K - " + letra ;
     }
 }

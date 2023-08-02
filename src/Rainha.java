@@ -87,7 +87,8 @@ public class Rainha extends Peca {
 
     @Override
     public String toString() {
-        return "Rainha{} " + super.toString();
+        String letra = this.getCor().substring(0,1);
+        return "Q - " + letra;
     }
 }
 

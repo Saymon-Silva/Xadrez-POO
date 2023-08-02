@@ -51,6 +51,7 @@ public class Bispo extends Peca{
 
     @Override
     public String toString() {
-        return "Bispo"+super.toString();
+        String letra = this.getCor().substring(0,1);
+        return "B - " + letra;
     }
 }

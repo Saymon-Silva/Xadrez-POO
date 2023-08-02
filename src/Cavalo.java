@@ -66,6 +66,7 @@ public class Cavalo extends Peca{
 
     @Override
     public String toString() {
-        return "Cavalo " + super.toString();
+        String letra = this.getCor().substring(0,1);
+        return "H - " + letra;
     }
 }
