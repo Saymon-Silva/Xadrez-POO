@@ -14,8 +14,7 @@ public class Jogador {
     }
 
 
-    public boolean moverPeca(Peca peca,
-                             Posicao posicao, Tabuleiro tabuleiro, Jogador adversario) {
+    public boolean moverPeca(Peca peca, Posicao posicao, Tabuleiro tabuleiro, Jogador adversario) {
 
         Peca pecaAdversaria = posicao.getPeca();
         boolean valida = peca.mover(tabuleiro, posicao);

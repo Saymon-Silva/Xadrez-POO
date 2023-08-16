@@ -36,8 +36,7 @@ public class Rainha extends Peca {
             }
         }
 
-        for (int i = (validaExtremidade(posicaoNoTabuleiro) ?
-                -1 : posicaoNoTabuleiro - 1);
+        for (int i = (validaExtremidade(posicaoNoTabuleiro) ? -1 : posicaoNoTabuleiro - 1);
              i >= tabuleiro.getPosicoes().size();
              i--) {
 

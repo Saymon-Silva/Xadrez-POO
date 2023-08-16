@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Executavel {
 
     private static Scanner sc = new Scanner(System.in);
-    private static Jogador jogador;
+    private static Jogador jogadorAtual;
     private static Tabuleiro tabuleiro;
 
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Executavel {
         Jogador j2 = new Jogador("Wilson","wilson");
 
         Tabuleiro tabuleiro = new Tabuleiro();
-        imprimirTabuleiro(tabuleiro,jogador);
+        imprimirTabuleiro(tabuleiro,jogadorAtual);
 
 
         j1.setCor("Branco",tabuleiro);

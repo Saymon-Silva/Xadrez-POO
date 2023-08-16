@@ -11,11 +11,11 @@ public abstract class Peca {
 
 
     public boolean verificaPeca(Posicao posicao, ArrayList<Posicao> possiveisMovimentos) {
-        if (posicao.getPeca() == null) {
+        if (posicao.getPeca() == null) {//valida a movimentação onde não há uma peca.
             possiveisMovimentos.add(posicao);
             return false;
 
-        } else {
+        } else {//validando a movinentação pro ataque, onde haja uma peça inimiga.
             if (!posicao.getPeca().getCor().equals(this.getCor())) {
                 possiveisMovimentos.add(posicao);
             }
@@ -43,7 +43,7 @@ public abstract class Peca {
 
     }
     public boolean validaExtremidade(int posicaoNoTabuleiro){
-        return posicaoNoTabuleiro%8==0;
+        return posicaoNoTabuleiro%8==0;//validação das extremidades
 
     }
 
