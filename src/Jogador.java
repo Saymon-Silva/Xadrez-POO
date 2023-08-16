@@ -47,4 +47,8 @@ public class Jogador {
     public ArrayList<Peca> getPecas() {
         return pecas;
     }
+
+    public String getCor() {
+        return cor;
+    }
 }

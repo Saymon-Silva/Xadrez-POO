@@ -1,18 +1,20 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Executavel {
 
+    private static Scanner sc = new Scanner(System.in);
+    private static Jogador jogador;
+    private static Tabuleiro tabuleiro;
+
     public static void main(String[] args) {
-
-
-        Scanner sc = new Scanner(System.in);
 
         Jogador j1 = new Jogador("jorge","Senh@123");
         Jogador j2 = new Jogador("Wilson","wilson");
 
         Tabuleiro tabuleiro = new Tabuleiro();
-        printarTabuleiro(tabuleiro);
+        imprimirTabuleiro(tabuleiro,jogador);
 
 
         j1.setCor("Branco",tabuleiro);
@@ -58,20 +60,41 @@ public class Executavel {
         }
         return true;
     }
-    private static void printarTabuleiro( Tabuleiro tabuleiro){
 
-        ArrayList<Posicao> posicao = tabuleiro.getPosicoes();//posicao do tabuleiro
+    private static void imprimirTabuleiro(Tabuleiro tabuleiro, Jogador jogadorAtual){
 
-      for( int i = 0; i< posicao.size(); i++){
+        int index = 1;
 
-          if( posicao != null){
-              Peca peca = posicao.get(i).getPeca();
-              if (i % 8 == 0) {
+        if(jogadorAtual.getCor().equals("Branco")) {
+            for(Posicao posicao: tabuleiro.getPosicoes()){
+                if(posicao.getPeca() != null) {
+                    System.out.print(" | " + posicao.getPeca());
+                } else {
+                    System.out.print(" | " + "  ");
+                }
+                if(index %8==0) {
+                    System.out.print(" | \n");
+                }
+                index++;
+            }
+        } else {
+            ArrayList<Posicao> tabuleiroInvertido = tabuleiro.getPosicoes();
+            Collections.reverse(tabuleiroInvertido);
 
-              }
-          }
+            for(Posicao posicao: tabuleiroInvertido){
+                if(posicao.getPeca() != null) {
+                    System.out.print(" | " + posicao.getPeca());
+                } else {
+                    System.out.print(" | " + "  ");
+                }
+                if(index %8==0) {
+                    System.out.print(" | \n");
+                }
+                index++;
+            }
+            Collections.reverse(tabuleiroInvertido);
+        }
 
-      }
     }
 //endregion
 
